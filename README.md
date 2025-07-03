@@ -23,12 +23,56 @@ Follow these steps to clone and run the app:
 
 ### 1. Clone the Repository
 
-````bash
+```bash
 git clone https://github.com/mwildan666/frontend-muhammad-wildan.git
 
-```bash
-npm install
+```
+
+### 2. Navigate to the Project Folder
 
 ```bash
+
+cd frontend-muhammad-wildan
+```
+
+### 3. Install Dependencies
+
+```bash
+
+npm install
+```
+
+or
+
+```bash
+
+yarn install
+```
+
+or
+
+```bash
+
+pnpm install
+```
+
+### 4. Run the Development Server
+
+```bash
+
 npm run dev
-````
+```
+
+or
+
+```bash
+
+yarn run dev
+```
+
+or
+
+```bash
+
+pnpm run dev
+```
