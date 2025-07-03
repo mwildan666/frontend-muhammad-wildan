@@ -1,78 +1,45 @@
-# Next.js + shadcn + Tailwind App
+# Simple Form
 
-A simple form app using:
+## Cara Jalanin Project Ini
 
-- Next.js (App Router)
-- shadcn/ui (Radix-based UI library)
-- Tailwind CSS
-- TypeScript
+Ikutin langkah-langkah di bawah ini:
 
-This project demonstrates a dynamic form where:
-
-- Selecting a country dynamically fetches ports
-- Selecting a port fetches goods data
-- Autoselect first item automatically
-- Automatically calculates total price considering discounts
-- Smooth modern UI styling with Tailwind and shadcn components
-
----
-
-## 🛠️ How to Run Locally
-
-Follow these steps to clone and run the app:
-
-### 1. Clone the Repository
+### 1. Clone Repo-nya
 
 ```bash
 git clone https://github.com/mwildan666/frontend-muhammad-wildan.git
-
 ```
 
-### 2. Navigate to the Project Folder
+### 2. Masuk ke Folder Project
 
 ```bash
-
 cd frontend-muhammad-wildan
 ```
 
-### 3. Install Dependencies
+### 3. Install Dependency
+
+Pilih salah satu:
 
 ```bash
-
 npm install
-```
-
-or
-
-```bash
-
+# atau
 yarn install
-```
-
-or
-
-```bash
-
+# atau
 pnpm install
 ```
 
-### 4. Run the Development Server
+### 4. Jalankan Server Development
 
 ```bash
-
 npm run dev
-```
-
-or
-
-```bash
-
+# atau
 yarn run dev
-```
-
-or
-
-```bash
-
+# atau
 pnpm run dev
 ```
+
+Run [http://localhost:3000](http://localhost:3000) di browser!
+
+---
+
+Thanks!
