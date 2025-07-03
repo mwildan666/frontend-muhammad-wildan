@@ -148,7 +148,7 @@ export default function Form() {
         <Label className="text-lg font-bold">TOTAL</Label>
         <div className="text-green-800 text-3xl font-extrabold">
           {barang ? (
-            <CountUp end={total} duration={1.2} separator="." prefix="Rp " />
+            <CountUp end={total} duration={0.2} separator="." prefix="Rp " />
           ) : (
             ":("
           )}
