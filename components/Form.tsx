@@ -21,15 +21,26 @@ export default function Form() {
   const [pelabuhan, setPelabuhan] = useState<any>(null);
   const [barang, setBarang] = useState<any>(null);
   const [total, setTotal] = useState<number>(0);
+  const [diskonEdit, setDiskonEdit] = useState<number | "">("");
+
+  useEffect(() => {
+    if (barang) {
+      setDiskonEdit(barang.diskon ?? 0);
+    } else {
+      setDiskonEdit("");
+    }
+  }, [barang]);
 
   useEffect(() => {
     if (barang) {
       const harga = Number(barang.harga || 0);
-      const diskon = Number(barang.diskon || 0);
+      const diskon = Number(diskonEdit) || 0;
       const totalHitung = harga - (harga * diskon) / 100;
       setTotal(totalHitung);
+    } else {
+      setTotal(0);
     }
-  }, [barang]);
+  }, [barang, diskonEdit]);
 
   const fetchPelabuhans = useCallback(() => {
     if (!negara) return Promise.resolve([]);
@@ -107,9 +118,20 @@ export default function Form() {
         <div className="space-y-2">
           <Label className="text-lg font-semibold">DISKON (%)</Label>
           <Input
-            value={barang?.diskon || "-"}
-            readOnly
+            value={diskonEdit}
+            onChange={(e) =>
+              setDiskonEdit(
+                e.target.value === ""
+                  ? ""
+                  : Math.max(0, Math.min(100, Number(e.target.value)))
+              )
+            }
+            type="number"
+            min={0}
+            max={100}
+            placeholder="0"
             className="border-gray-300 focus:ring-primary focus:border-primary transition-all"
+            disabled={!barang}
           />
         </div>
         <div className="space-y-2">
